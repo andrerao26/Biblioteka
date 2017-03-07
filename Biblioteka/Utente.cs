@@ -9,9 +9,13 @@ namespace Biblioteka
     class Utente
     {
         public string nome { get; set; }
+
         public string cognome { get; set; }
+
         public string codiceFiscale { get; set; }
+
         public DateTime dataNascita { get; set; }
+
         public List<Libro> libriPrestito = new List<Libro>();
 
         public Utente()

@@ -22,7 +22,17 @@ namespace Biblioteka
 
         }
 
-        private void genera_utenti_Click(object sender, EventArgs e)
+        private void generaLibriButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void generaUtentiButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prestitoButton_Click(object sender, EventArgs e)
         {
 
         }

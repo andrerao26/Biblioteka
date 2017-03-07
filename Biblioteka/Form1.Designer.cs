@@ -28,86 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lista_libri = new System.Windows.Forms.ListBox();
-            this.lista_utenti = new System.Windows.Forms.ListBox();
-            this.Descrizione_libro = new System.Windows.Forms.TextBox();
-            this.Disponibilità_libro = new System.Windows.Forms.TextBox();
-            this.genera_libri = new System.Windows.Forms.Button();
-            this.genera_utenti = new System.Windows.Forms.Button();
-            this.prestito = new System.Windows.Forms.Button();
+            this.listboxLibri = new System.Windows.Forms.ListBox();
+            this.listboxUtenti = new System.Windows.Forms.ListBox();
+            this.descrizioneLibroTxt = new System.Windows.Forms.TextBox();
+            this.disponibilitàLibroTxt = new System.Windows.Forms.TextBox();
+            this.generaLibriButton = new System.Windows.Forms.Button();
+            this.generaUtentiButton = new System.Windows.Forms.Button();
+            this.prestitoButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lista_libri
+            // listboxLibri
             // 
-            this.lista_libri.FormattingEnabled = true;
-            this.lista_libri.Location = new System.Drawing.Point(12, 12);
-            this.lista_libri.Name = "lista_libri";
-            this.lista_libri.Size = new System.Drawing.Size(207, 147);
-            this.lista_libri.TabIndex = 0;
+            this.listboxLibri.FormattingEnabled = true;
+            this.listboxLibri.ItemHeight = 16;
+            this.listboxLibri.Location = new System.Drawing.Point(13, 13);
+            this.listboxLibri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listboxLibri.Name = "listboxLibri";
+            this.listboxLibri.Size = new System.Drawing.Size(275, 180);
+            this.listboxLibri.TabIndex = 0;
             // 
-            // lista_utenti
+            // listboxUtenti
             // 
-            this.lista_utenti.FormattingEnabled = true;
-            this.lista_utenti.Location = new System.Drawing.Point(518, 12);
-            this.lista_utenti.Name = "lista_utenti";
-            this.lista_utenti.Size = new System.Drawing.Size(211, 147);
-            this.lista_utenti.TabIndex = 1;
+            this.listboxUtenti.FormattingEnabled = true;
+            this.listboxUtenti.ItemHeight = 16;
+            this.listboxUtenti.Location = new System.Drawing.Point(690, 13);
+            this.listboxUtenti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listboxUtenti.Name = "listboxUtenti";
+            this.listboxUtenti.Size = new System.Drawing.Size(280, 180);
+            this.listboxUtenti.TabIndex = 1;
             // 
-            // Descrizione_libro
+            // descrizioneLibroTxt
             // 
-            this.Descrizione_libro.Location = new System.Drawing.Point(284, 31);
-            this.Descrizione_libro.Name = "Descrizione_libro";
-            this.Descrizione_libro.Size = new System.Drawing.Size(183, 20);
-            this.Descrizione_libro.TabIndex = 2;
+            this.descrizioneLibroTxt.Location = new System.Drawing.Point(379, 13);
+            this.descrizioneLibroTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descrizioneLibroTxt.Multiline = true;
+            this.descrizioneLibroTxt.Name = "descrizioneLibroTxt";
+            this.descrizioneLibroTxt.Size = new System.Drawing.Size(250, 70);
+            this.descrizioneLibroTxt.TabIndex = 2;
+            this.descrizioneLibroTxt.Text = "qui descrivo il libro selezionato";
             // 
-            // Disponibilità_libro
+            // disponibilitàLibroTxt
             // 
-            this.Disponibilità_libro.Location = new System.Drawing.Point(284, 94);
-            this.Disponibilità_libro.MaxLength = 489932767;
-            this.Disponibilità_libro.Name = "Disponibilità_libro";
-            this.Disponibilità_libro.Size = new System.Drawing.Size(183, 20);
-            this.Disponibilità_libro.TabIndex = 3;
+            this.disponibilitàLibroTxt.Location = new System.Drawing.Point(379, 123);
+            this.disponibilitàLibroTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.disponibilitàLibroTxt.MaxLength = 489932767;
+            this.disponibilitàLibroTxt.Multiline = true;
+            this.disponibilitàLibroTxt.Name = "disponibilitàLibroTxt";
+            this.disponibilitàLibroTxt.Size = new System.Drawing.Size(250, 70);
+            this.disponibilitàLibroTxt.TabIndex = 3;
+            this.disponibilitàLibroTxt.Text = "qui mostro la disponibilità del libro";
             // 
-            // genera_libri
+            // generaLibriButton
             // 
-            this.genera_libri.Location = new System.Drawing.Point(62, 165);
-            this.genera_libri.Name = "genera_libri";
-            this.genera_libri.Size = new System.Drawing.Size(94, 55);
-            this.genera_libri.TabIndex = 4;
-            this.genera_libri.Text = "genera_libri";
-            this.genera_libri.UseVisualStyleBackColor = true;
+            this.generaLibriButton.Location = new System.Drawing.Point(13, 201);
+            this.generaLibriButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.generaLibriButton.Name = "generaLibriButton";
+            this.generaLibriButton.Size = new System.Drawing.Size(125, 68);
+            this.generaLibriButton.TabIndex = 4;
+            this.generaLibriButton.Text = "genera libri";
+            this.generaLibriButton.UseVisualStyleBackColor = true;
+            this.generaLibriButton.Click += new System.EventHandler(this.generaLibriButton_Click);
             // 
-            // genera_utenti
+            // generaUtentiButton
             // 
-            this.genera_utenti.Location = new System.Drawing.Point(585, 165);
-            this.genera_utenti.Name = "genera_utenti";
-            this.genera_utenti.Size = new System.Drawing.Size(93, 55);
-            this.genera_utenti.TabIndex = 5;
-            this.genera_utenti.Text = "genera_utenti";
-            this.genera_utenti.UseVisualStyleBackColor = true;
-            this.genera_utenti.Click += new System.EventHandler(this.genera_utenti_Click);
+            this.generaUtentiButton.Location = new System.Drawing.Point(846, 201);
+            this.generaUtentiButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.generaUtentiButton.Name = "generaUtentiButton";
+            this.generaUtentiButton.Size = new System.Drawing.Size(124, 68);
+            this.generaUtentiButton.TabIndex = 5;
+            this.generaUtentiButton.Text = "genera utenti";
+            this.generaUtentiButton.UseVisualStyleBackColor = true;
+            this.generaUtentiButton.Click += new System.EventHandler(this.generaUtentiButton_Click);
             // 
-            // prestito
+            // prestitoButton
             // 
-            this.prestito.Location = new System.Drawing.Point(294, 136);
-            this.prestito.Name = "prestito";
-            this.prestito.Size = new System.Drawing.Size(173, 84);
-            this.prestito.TabIndex = 6;
-            this.prestito.Text = "Prende il select.index nella listbox dei libri e lo presta all\'utente";
-            this.prestito.UseVisualStyleBackColor = true;
+            this.prestitoButton.Location = new System.Drawing.Point(379, 201);
+            this.prestitoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prestitoButton.Name = "prestitoButton";
+            this.prestitoButton.Size = new System.Drawing.Size(250, 100);
+            this.prestitoButton.TabIndex = 6;
+            this.prestitoButton.Text = "Prende il select.index nella listbox dei libri e lo presta all\'utente selezionato" +
+    "";
+            this.prestitoButton.UseVisualStyleBackColor = true;
+            this.prestitoButton.Click += new System.EventHandler(this.prestitoButton_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 584);
-            this.Controls.Add(this.prestito);
-            this.Controls.Add(this.genera_utenti);
-            this.Controls.Add(this.genera_libri);
-            this.Controls.Add(this.Disponibilità_libro);
-            this.Controls.Add(this.Descrizione_libro);
-            this.Controls.Add(this.lista_utenti);
-            this.Controls.Add(this.lista_libri);
+            this.ClientSize = new System.Drawing.Size(1179, 719);
+            this.Controls.Add(this.prestitoButton);
+            this.Controls.Add(this.generaUtentiButton);
+            this.Controls.Add(this.generaLibriButton);
+            this.Controls.Add(this.disponibilitàLibroTxt);
+            this.Controls.Add(this.descrizioneLibroTxt);
+            this.Controls.Add(this.listboxUtenti);
+            this.Controls.Add(this.listboxLibri);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -118,13 +135,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lista_libri;
-        private System.Windows.Forms.ListBox lista_utenti;
-        private System.Windows.Forms.TextBox Descrizione_libro;
-        private System.Windows.Forms.TextBox Disponibilità_libro;
-        private System.Windows.Forms.Button genera_libri;
-        private System.Windows.Forms.Button genera_utenti;
-        private System.Windows.Forms.Button prestito;
+        private System.Windows.Forms.ListBox listboxLibri;
+        private System.Windows.Forms.ListBox listboxUtenti;
+        private System.Windows.Forms.TextBox descrizioneLibroTxt;
+        private System.Windows.Forms.TextBox disponibilitàLibroTxt;
+        private System.Windows.Forms.Button generaLibriButton;
+        private System.Windows.Forms.Button generaUtentiButton;
+        private System.Windows.Forms.Button prestitoButton;
     }
 }
 

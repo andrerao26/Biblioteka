@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Biblioteka
 {
-    class Seeder
+    static class Seeder
     {
+
     }
 }
