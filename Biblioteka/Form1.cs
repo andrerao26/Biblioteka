@@ -19,20 +19,35 @@ namespace Biblioteka
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void generaLibriButton_Click(object sender, EventArgs e)
         {
-
+            Seeder.generateLibri();
         }
 
         private void generaUtentiButton_Click(object sender, EventArgs e)
         {
-
+            Seeder.generateUtenti();
+        }
+       
+        private void prestitoButton_Click(object sender, EventArgs e)
+        {
+            
         }
 
-        private void prestitoButton_Click(object sender, EventArgs e)
+        private void describeLibroButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void describeUtenteButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void describeLibriPrestitoButton_Click(object sender, EventArgs e)
         {
 
         }

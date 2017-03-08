@@ -8,7 +8,7 @@ namespace Biblioteka
 {
     class Libro
     {
-        //public enum genere { Giallo, Avventura, Azione, Thriller, Storico, Fantascienza, Guerra, Ragazzi, Scienitifico, Horror, Biografia, Narrativa };
+        //public enum genere { Giallo, Avventura, Azione, Thriller, Storico, Fantascienza, Guerra, Ragazzi, Scienitifico, Horror, Biografia, Narrativa, Poesia };
 
         public string titolo { get; set; }
 
@@ -39,11 +39,11 @@ namespace Biblioteka
                             isbn + "\r\n";
             if (prestato)
             {
-                output += "il libro non è attualmente in prestito \r\n";
+                output += "il libro non è attualmente in prestito. ";
             }
             else
             {
-                output += "il libro è attualmente in prestito a " + possessore.nome;
+                output += "il libro è attualmente in prestito a " + possessore.nome + ". ";
             }
 
             return output;

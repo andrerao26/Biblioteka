@@ -8,6 +8,14 @@ namespace Biblioteka
 {
     static class Seeder
     {
+        public static string generateUtenti()
+        {
+            return "questa funzione genererà gli utenti";
+        }
 
+        public static string generateLibri()
+        {
+            return "questa funzione genererà i libri";
+        }
     }
 }
