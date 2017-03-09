@@ -39,6 +39,8 @@ namespace Biblioteka
 
         private void describeLibroButton_Click(object sender, EventArgs e)
         {
+            object book = listboxLibri.Items[listboxLibri.SelectedIndex];
+            Convert.ChangeType(book, typeof(Libro));
             
         }
 

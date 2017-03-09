@@ -18,14 +18,21 @@ namespace Biblioteka
 
         public List<Libro> libriPrestito = new List<Libro>();
 
-        public Utente()
+        public Utente(string nome, string cognome, string codiceFiscale, DateTime dataNascita)
         {
-
+            this.nome = nome;
+            this.cognome = cognome;
+            this.codiceFiscale = codiceFiscale;
+            this.dataNascita = dataNascita;
         }
 
         public string describeUtente()
         {
-            return "qua descrivo l'utente";
+            return nome + "\r\n" +
+                   cognome + "\r\n" +
+                   codiceFiscale + "\r\n" +
+                   dataNascita + "\r\n" +
+                   "L'utente ha " + libriPrestito.Count + " libri in prestito.";
         }
 
         public override string ToString()
@@ -35,7 +42,14 @@ namespace Biblioteka
 
         public string describeLibriPrestito()
         {
-            return "qua descrivo tutti i libri in prestito all'utente";
+            string output = "";
+            int l = libriPrestito.Count;
+            for (int i = 0; i < l; i++)
+            {
+                output += libriPrestito[i].describeLibro();
+            }
+
+            return output;
         }
     }
 }
