@@ -34,7 +34,7 @@ namespace Biblioteka
        
         private void prestitoButton_Click(object sender, EventArgs e)
         {
-            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
+            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;  //items restituisce sempre object, quindi lo rendo utente
             Libro book = listboxLibri.Items[listboxLibri.SelectedIndex] as Libro;
             book.prestaLibro(user);
         }
