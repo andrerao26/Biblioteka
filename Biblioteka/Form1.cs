@@ -36,30 +36,33 @@ namespace Biblioteka
         {
             Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;  //items restituisce sempre object, quindi lo rendo utente
             Libro book = listboxLibri.Items[listboxLibri.SelectedIndex] as Libro;
-            book.prestaLibro(user);
+            if (book.prestaLibro(user))
+            {
+                disponibilitàLibroTxt.Text = "Il prestito del libro " + book.titolo + " è stato effettuato con successo a " + user.ToString();
+            }
+            else
+            {
+                disponibilitàLibroTxt.Text = "Il prestito del libro " + book.titolo + " non è andato a buon fine. \r\n" +
+                                             "Il libro è già attualmente in prestito a " + book.possessore.ToString();
+            }
         }
 
         private void describeLibroButton_Click(object sender, EventArgs e)
         {
             Libro book = listboxLibri.Items[listboxLibri.SelectedIndex] as Libro;
-            book.describeLibro();
+            descrizioneLibroTxt.Text = book.describeLibro();
         }
 
         private void describeUtenteButton_Click(object sender, EventArgs e)
         {
             Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
-            user.describeUtente();
+            descrizioneUtenteTxt.Text = user.describeUtente();
         }
 
         private void describeLibriPrestitoButton_Click(object sender, EventArgs e)
         {
             Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
-            user.describeLibriPrestito();
-        }
-
-        private void listboxLibri_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            descrizioneLibriPrestitoTxt.Text = user.describeLibriPrestito();
         }
     }
 }

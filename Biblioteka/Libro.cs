@@ -8,8 +8,6 @@ namespace Biblioteka
 {
     class Libro
     {
-        //public enum genere { Giallo, Avventura, Azione, Thriller, Storico, Fantascienza, Guerra, Ragazzi, Scienitifico, Horror, Biografia, Narrativa, Poesia };
-
         public string titolo { get; set; }
 
         public string autore { get; set; }
@@ -51,7 +49,7 @@ namespace Biblioteka
 
         public override string ToString()
         {
-            return titolo + " " + isbn;
+            return titolo + " " + isbn + "\r\n";
         }
 
         public bool prestaLibro(Utente user)
@@ -60,6 +58,7 @@ namespace Biblioteka
             {
                 user.libriPrestito.Add(this);
                 _prestato = true;
+                possessore = user;
 
                 return true;
             }

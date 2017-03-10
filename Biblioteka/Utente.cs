@@ -46,7 +46,7 @@ namespace Biblioteka
             int l = libriPrestito.Count;
             for (int i = 0; i < l; i++)
             {
-                output += libriPrestito[i].describeLibro();
+                output += libriPrestito[i].ToString();
             }
 
             return output;
