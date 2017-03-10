@@ -39,11 +39,11 @@ namespace Biblioteka
                             isbn + "\r\n";
             if (prestato)
             {
-                output += "il libro non è attualmente in prestito. ";
+                output += "il libro è attualmente in prestito a " + possessore.nome + ". ";
             }
             else
             {
-                output += "il libro è attualmente in prestito a " + possessore.nome + ". ";
+                output += "il libro non è attualmente in prestito. ";
             }
 
             return output;

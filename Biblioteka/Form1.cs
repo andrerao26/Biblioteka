@@ -34,24 +34,27 @@ namespace Biblioteka
        
         private void prestitoButton_Click(object sender, EventArgs e)
         {
-            
+            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
+            Libro book = listboxLibri.Items[listboxLibri.SelectedIndex] as Libro;
+            book.prestaLibro(user);
         }
 
         private void describeLibroButton_Click(object sender, EventArgs e)
         {
-            object book = listboxLibri.Items[listboxLibri.SelectedIndex];
-            Convert.ChangeType(book, typeof(Libro));
-            
+            Libro book = listboxLibri.Items[listboxLibri.SelectedIndex] as Libro;
+            book.describeLibro();
         }
 
         private void describeUtenteButton_Click(object sender, EventArgs e)
         {
-            
+            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
+            user.describeUtente();
         }
 
         private void describeLibriPrestitoButton_Click(object sender, EventArgs e)
         {
-
+            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
+            user.describeLibriPrestito();
         }
     }
 }

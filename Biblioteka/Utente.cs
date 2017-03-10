@@ -28,10 +28,10 @@ namespace Biblioteka
 
         public string describeUtente()
         {
-            return nome + "\r\n" +
-                   cognome + "\r\n" +
-                   codiceFiscale + "\r\n" +
-                   dataNascita + "\r\n" +
+            return nome           + "\r\n" +
+                   cognome        + "\r\n" +
+                   codiceFiscale  + "\r\n" +
+                   dataNascita    + "\r\n" +
                    "L'utente ha " + libriPrestito.Count + " libri in prestito.";
         }
 
