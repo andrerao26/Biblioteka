@@ -56,5 +56,10 @@ namespace Biblioteka
             Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
             user.describeLibriPrestito();
         }
+
+        private void listboxLibri_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

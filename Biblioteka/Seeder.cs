@@ -8,9 +8,10 @@ namespace Biblioteka
 {
     static class Seeder
     {
-        public static string generateUtenti()
+        public static void generateUtenti()
         {
-            return "questa funzione genererà gli utenti";
+            string[] arrayNomi = { "Bensi", "Lollo", "Martina", "Lorenzo", "Dario", "Ajeje", "Remo" , "Cataldo" , "Gino" , "Michele" };
+            string[] arrayCognomi = { "IlVecchio", "Ambrogi", "Brosio", "Brazorrf", "Calen", "Garpelli", "Baglio", "Codeluppi", "Fumagalli", "Brambilla" };
         }
 
         public static string generateLibri()
