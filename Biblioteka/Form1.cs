@@ -34,8 +34,9 @@ namespace Biblioteka
        
         private void prestitoButton_Click(object sender, EventArgs e)
         {
-            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;  //items restituisce sempre object, quindi lo rendo utente
+            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
             Libro book = listboxLibri.Items[listboxLibri.SelectedIndex] as Libro;
+
             if (book.prestaLibro(user))
             {
                 disponibilitàLibroTxt.Text = "Il prestito del libro " + book.titolo + " è stato effettuato con successo a " + user.ToString();
