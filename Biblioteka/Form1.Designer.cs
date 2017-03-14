@@ -47,7 +47,7 @@
             this.listboxLibri.FormattingEnabled = true;
             this.listboxLibri.ItemHeight = 16;
             this.listboxLibri.Location = new System.Drawing.Point(13, 14);
-            this.listboxLibri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listboxLibri.Margin = new System.Windows.Forms.Padding(4);
             this.listboxLibri.Name = "listboxLibri";
             this.listboxLibri.Size = new System.Drawing.Size(300, 196);
             this.listboxLibri.TabIndex = 0;
@@ -57,7 +57,7 @@
             this.listboxUtenti.FormattingEnabled = true;
             this.listboxUtenti.ItemHeight = 16;
             this.listboxUtenti.Location = new System.Drawing.Point(691, 14);
-            this.listboxUtenti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listboxUtenti.Margin = new System.Windows.Forms.Padding(4);
             this.listboxUtenti.Name = "listboxUtenti";
             this.listboxUtenti.Size = new System.Drawing.Size(300, 196);
             this.listboxUtenti.TabIndex = 1;
@@ -65,7 +65,7 @@
             // descrizioneLibroTxt
             // 
             this.descrizioneLibroTxt.Location = new System.Drawing.Point(13, 297);
-            this.descrizioneLibroTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descrizioneLibroTxt.Margin = new System.Windows.Forms.Padding(4);
             this.descrizioneLibroTxt.Multiline = true;
             this.descrizioneLibroTxt.Name = "descrizioneLibroTxt";
             this.descrizioneLibroTxt.Size = new System.Drawing.Size(300, 100);
@@ -75,7 +75,7 @@
             // disponibilitàLibroTxt
             // 
             this.disponibilitàLibroTxt.Location = new System.Drawing.Point(379, 14);
-            this.disponibilitàLibroTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.disponibilitàLibroTxt.Margin = new System.Windows.Forms.Padding(4);
             this.disponibilitàLibroTxt.MaxLength = 489932767;
             this.disponibilitàLibroTxt.Multiline = true;
             this.disponibilitàLibroTxt.Name = "disponibilitàLibroTxt";
@@ -86,7 +86,7 @@
             // generateLibriButton
             // 
             this.generateLibriButton.Location = new System.Drawing.Point(13, 217);
-            this.generateLibriButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.generateLibriButton.Margin = new System.Windows.Forms.Padding(4);
             this.generateLibriButton.Name = "generateLibriButton";
             this.generateLibriButton.Size = new System.Drawing.Size(100, 50);
             this.generateLibriButton.TabIndex = 4;
@@ -97,7 +97,7 @@
             // generateUtentiButton
             // 
             this.generateUtentiButton.Location = new System.Drawing.Point(891, 217);
-            this.generateUtentiButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.generateUtentiButton.Margin = new System.Windows.Forms.Padding(4);
             this.generateUtentiButton.Name = "generateUtentiButton";
             this.generateUtentiButton.Size = new System.Drawing.Size(100, 50);
             this.generateUtentiButton.TabIndex = 5;
@@ -108,7 +108,7 @@
             // prestitoButton
             // 
             this.prestitoButton.Location = new System.Drawing.Point(408, 192);
-            this.prestitoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prestitoButton.Margin = new System.Windows.Forms.Padding(4);
             this.prestitoButton.Name = "prestitoButton";
             this.prestitoButton.Size = new System.Drawing.Size(200, 100);
             this.prestitoButton.TabIndex = 6;
@@ -141,7 +141,7 @@
             // descrizioneUtenteTxt
             // 
             this.descrizioneUtenteTxt.Location = new System.Drawing.Point(691, 297);
-            this.descrizioneUtenteTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descrizioneUtenteTxt.Margin = new System.Windows.Forms.Padding(4);
             this.descrizioneUtenteTxt.Multiline = true;
             this.descrizioneUtenteTxt.Name = "descrizioneUtenteTxt";
             this.descrizioneUtenteTxt.Size = new System.Drawing.Size(300, 100);
@@ -151,7 +151,7 @@
             // descrizioneLibriPrestitoTxt
             // 
             this.descrizioneLibriPrestitoTxt.Location = new System.Drawing.Point(691, 405);
-            this.descrizioneLibriPrestitoTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descrizioneLibriPrestitoTxt.Margin = new System.Windows.Forms.Padding(4);
             this.descrizioneLibriPrestitoTxt.Multiline = true;
             this.descrizioneLibriPrestitoTxt.Name = "descrizioneLibriPrestitoTxt";
             this.descrizioneLibriPrestitoTxt.Size = new System.Drawing.Size(300, 100);
@@ -186,7 +186,7 @@
             this.Controls.Add(this.descrizioneLibroTxt);
             this.Controls.Add(this.listboxUtenti);
             this.Controls.Add(this.listboxLibri);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -196,9 +196,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listboxLibri;
-        private System.Windows.Forms.ListBox listboxUtenti;
         private System.Windows.Forms.TextBox descrizioneLibroTxt;
         private System.Windows.Forms.TextBox disponibilitàLibroTxt;
         private System.Windows.Forms.Button generateLibriButton;
@@ -209,6 +206,8 @@
         private System.Windows.Forms.TextBox descrizioneUtenteTxt;
         private System.Windows.Forms.TextBox descrizioneLibriPrestitoTxt;
         private System.Windows.Forms.Button describeLibriPrestitoButton;
+        public System.Windows.Forms.ListBox listboxLibri;
+        public System.Windows.Forms.ListBox listboxUtenti;
     }
 }
 

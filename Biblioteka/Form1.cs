@@ -24,12 +24,12 @@ namespace Biblioteka
 
         private void generaLibriButton_Click(object sender, EventArgs e)
         {
-            Seeder.generateLibri();
+            Seeder.generateLibri(listboxLibri);
         }
 
         private void generaUtentiButton_Click(object sender, EventArgs e)
         {
-            Seeder.generateUtenti();
+            Seeder.generateUtenti(listboxUtenti);
         }
        
         private void prestitoButton_Click(object sender, EventArgs e)
