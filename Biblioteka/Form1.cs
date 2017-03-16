@@ -34,8 +34,8 @@ namespace Biblioteka
        
         private void prestitoButton_Click(object sender, EventArgs e)
         {
-            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
-            Libro book = listboxLibri.Items[listboxLibri.SelectedIndex] as Libro;
+            Utente user = listboxUtenti.SelectedItem as Utente;
+            Libro book = listboxLibri.SelectedItem as Libro;
 
             if (book.prestaLibro(user))
             {
@@ -50,19 +50,19 @@ namespace Biblioteka
 
         private void describeLibroButton_Click(object sender, EventArgs e)
         {
-            Libro book = listboxLibri.Items[listboxLibri.SelectedIndex] as Libro;
+            Libro book = listboxLibri.SelectedItem as Libro;
             descrizioneLibroTxt.Text = book.describeLibro();
         }
 
         private void describeUtenteButton_Click(object sender, EventArgs e)
         {
-            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
+            Utente user = listboxUtenti.SelectedItem as Utente;
             descrizioneUtenteTxt.Text = user.describeUtente();
         }
 
         private void describeLibriPrestitoButton_Click(object sender, EventArgs e)
         {
-            Utente user = listboxUtenti.Items[listboxUtenti.SelectedIndex] as Utente;
+            Utente user = listboxUtenti.SelectedItem as Utente;
             descrizioneLibriPrestitoTxt.Text = user.describeLibriPrestito();
         }
     }
