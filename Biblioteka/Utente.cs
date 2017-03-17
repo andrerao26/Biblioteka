@@ -28,11 +28,14 @@ namespace Biblioteka
 
         public string describeUtente()
         {
-            return nome           + "\r\n" +
-                   cognome        + "\r\n" +
-                   codiceFiscale  + "\r\n" +
-                   dataNascita    + "\r\n" +
-                   "L'utente ha " + libriPrestito.Count + " libri in prestito.";
+            string birth = dataNascita.Day.ToString() + "/" + dataNascita.Month.ToString() + "/" + dataNascita.Year.ToString();
+            string output = "Nome: "            + nome           + "\r\n" +
+                            "Cognome: "         + cognome        + "\r\n" +
+                            "Codice fiscale: "  + codiceFiscale  + "\r\n" +
+                            "Data di Nascita: " + birth          + "\r\n" +
+                            "L'utente ha " + libriPrestito.Count + " libri in prestito.";
+
+            return output;
         }
 
         public override string ToString()

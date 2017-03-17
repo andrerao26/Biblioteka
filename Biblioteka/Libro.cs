@@ -16,8 +16,8 @@ namespace Biblioteka
 
         public string isbn { get; set; }
 
-        private bool _prestato;
-        public bool prestato { get { return false; } }
+        private bool _prestato = false;
+        public bool prestato { get { return _prestato; } }
 
         public Utente possessore { get; set; }
 
@@ -31,10 +31,10 @@ namespace Biblioteka
 
         public string describeLibro()
         {
-            string output = titolo + "\r\n" +
-                            autore + "\r\n" +
-                            genere + "\r\n" +
-                            isbn + "\r\n";
+            string output = "Titolo: " + titolo + "\r\n" +
+                            "Autore: " + autore + "\r\n" +
+                            "Genere: " + genere + "\r\n" +
+                            "Codice ISBN: " + isbn + "\r\n";
             if (prestato)
             {
                 output += "il libro è attualmente in prestito a " + possessore.nome + ". ";
