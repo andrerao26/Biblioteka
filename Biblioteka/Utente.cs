@@ -28,13 +28,27 @@ namespace Biblioteka
 
         public string describeUtente()
         {
-            string birth = dataNascita.Day.ToString() + "/" + dataNascita.Month.ToString() + "/" + dataNascita.Year.ToString();
+            string data = dataNascita.Day.ToString() + "/" + dataNascita.Month.ToString() + "/" + dataNascita.Year.ToString();
             string output = "Nome: "            + nome           + "\r\n" +
                             "Cognome: "         + cognome        + "\r\n" +
                             "Codice fiscale: "  + codiceFiscale  + "\r\n" +
-                            "Data di Nascita: " + birth          + "\r\n" +
-                            "L'utente ha " + libriPrestito.Count + " libri in prestito.";
+                            "Data di Nascita: " + data           + "\r\n" ;
+            int count = libriPrestito.Count;
+            switch (count)
+            {
+                case 0:
+                    output += "l'utente non ha attualmente libri in prestito";
+                    break;
 
+                case 1:
+                    output += "L'utente ha 1 libro in prestito.";
+                    break;
+
+                default:
+                    output += "L'utente ha " + count + " libri in prestito.";
+                    break;
+            }
+                            
             return output;
         }
 

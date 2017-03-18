@@ -40,6 +40,8 @@ namespace Biblioteka
             if (book.prestaLibro(user))
             {
                 disponibilitàLibroTxt.Text = "Il prestito del libro " + book.titolo + " è stato effettuato con successo a " + user.ToString();
+                descrizioneUtenteTxt.Text = user.describeUtente();
+                descrizioneLibriPrestitoTxt.Text = user.describeLibriPrestito();
             }
             else
             {
@@ -64,6 +66,17 @@ namespace Biblioteka
         {
             Utente user = listboxUtenti.SelectedItem as Utente;
             descrizioneLibriPrestitoTxt.Text = user.describeLibriPrestito();
+        }
+
+        private void listboxUtenti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            descrizioneUtenteTxt.Text = "qui descrivo l'utente selezionato";
+            descrizioneLibriPrestitoTxt.Text = "qui mostro tutti i libri che l'utente selezionato ha in prestito";
+        }
+
+        private void listboxLibri_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            descrizioneLibroTxt.Text = "qui descrivo il libro selezionato";
         }
     }
 }

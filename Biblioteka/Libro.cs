@@ -16,7 +16,7 @@ namespace Biblioteka
 
         public string isbn { get; set; }
 
-        private bool _prestato = false;
+        private bool _prestato;
         public bool prestato { get { return _prestato; } }
 
         public Utente possessore { get; set; }
@@ -27,6 +27,7 @@ namespace Biblioteka
             this.autore = autore;
             this.genere = genere;
             this.isbn = isbn;
+            _prestato = false;
         }
 
         public string describeLibro()

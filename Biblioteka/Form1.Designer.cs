@@ -51,6 +51,7 @@
             this.listboxLibri.Name = "listboxLibri";
             this.listboxLibri.Size = new System.Drawing.Size(300, 196);
             this.listboxLibri.TabIndex = 0;
+            this.listboxLibri.SelectedIndexChanged += new System.EventHandler(this.listboxLibri_SelectedIndexChanged);
             // 
             // listboxUtenti
             // 
@@ -61,6 +62,7 @@
             this.listboxUtenti.Name = "listboxUtenti";
             this.listboxUtenti.Size = new System.Drawing.Size(300, 196);
             this.listboxUtenti.TabIndex = 1;
+            this.listboxUtenti.SelectedIndexChanged += new System.EventHandler(this.listboxUtenti_SelectedIndexChanged);
             // 
             // descrizioneLibroTxt
             // 
