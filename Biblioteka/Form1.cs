@@ -33,7 +33,7 @@ namespace Biblioteka
 
             if (user == null || book == null)
             {
-                MessageBox.Show("Selezionare almeno un libro e un utente", "Selezionare un libro o un utente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selezionare almeno un libro e un utente", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -49,12 +49,6 @@ namespace Biblioteka
             descrizioneUtenteTxt.Text = user.describeUtente();
             descrizioneLibriPrestitoTxt.Text = user.describeLibriPrestito();
             descrizioneLibroTxt.Text = book.describeLibro();
-        }
-
-        private void describeLibriPrestitoButton_Click(object sender, EventArgs e)
-        {
-            Utente user = listboxUtenti.SelectedItem as Utente;
-            descrizioneLibriPrestitoTxt.Text = user.describeLibriPrestito();
         }
 
         private void listboxUtenti_SelectedIndexChanged(object sender, EventArgs e)

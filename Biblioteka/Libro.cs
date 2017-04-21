@@ -33,13 +33,15 @@ namespace Biblioteka
 
         public string describeLibro()
         {
-            string output = "Titolo: " + titolo    + Environment.NewLine +
-                            "Autore: " + autore    + Environment.NewLine +
-                            "Genere: " + genere    + Environment.NewLine +
-                            "Codice ISBN: " + isbn + Environment.NewLine;
+            string output = Environment.NewLine +
+                            "Titolo: "      + titolo + Environment.NewLine +
+                            "Autore: "      + autore + Environment.NewLine +
+                            "Genere: "      + genere + Environment.NewLine +
+                            "Codice ISBN: " + isbn   + Environment.NewLine +
+                                                       Environment.NewLine;
             if (prestato)
             {
-                output += "il libro è attualmente in prestito a " + possessore.nome + ". ";
+                output += "il libro è attualmente in prestito a " + possessore.ToString() + ". ";
             }
             else
             {

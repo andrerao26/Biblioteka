@@ -28,11 +28,11 @@ namespace Biblioteka
 
         public string describeUtente()
         {
-            string output = "Nome: "            + nome                            + Environment.NewLine +
+            string output = Environment.NewLine +
+                            "Nome: "            + nome                            + Environment.NewLine +
                             "Cognome: "         + cognome                         + Environment.NewLine +
                             "Codice fiscale: "  + codiceFiscale                   + Environment.NewLine +
                             "Data di Nascita: " + dataNascita.ToShortDateString() + Environment.NewLine;
-
 
             return output;
         }
