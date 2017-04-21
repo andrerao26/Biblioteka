@@ -19,47 +19,36 @@ namespace Biblioteka
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            for (int i = 0; i < 20; i++)
+            {
+                listboxLibri.Items.Add(Seeder.generateLibro());
+                listboxUtenti.Items.Add(Seeder.generateUtente());
+            }
         }
 
-        private void generaLibriButton_Click(object sender, EventArgs e)
-        {
-            Seeder.generateLibri(listboxLibri);
-        }
-
-        private void generaUtentiButton_Click(object sender, EventArgs e)
-        {
-            Seeder.generateUtenti(listboxUtenti);
-        }
-       
         private void prestitoButton_Click(object sender, EventArgs e)
         {
             Utente user = listboxUtenti.SelectedItem as Utente;
             Libro book = listboxLibri.SelectedItem as Libro;
 
-            if (book.prestaLibro(user))
+            if (user == null || book == null)
             {
-                disponibilitàLibroTxt.Text = "Il prestito del libro " + book.titolo + " è stato effettuato con successo a " + user.ToString();
-                descrizioneUtenteTxt.Text = user.describeUtente();
-                descrizioneLibriPrestitoTxt.Text = user.describeLibriPrestito();
+                MessageBox.Show("Selezionare almeno un libro e un utente", "Selezionare un libro o un utente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            try
             {
-                disponibilitàLibroTxt.Text = "Il prestito del libro " + book.titolo + " non è andato a buon fine. \r\n" +
-                                             "Il libro è già attualmente in prestito a " + book.possessore.ToString();
+                book.prestaLibro(user);
             }
-        }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
-        private void describeLibroButton_Click(object sender, EventArgs e)
-        {
-            Libro book = listboxLibri.SelectedItem as Libro;
-            descrizioneLibroTxt.Text = book.describeLibro();
-        }
-
-        private void describeUtenteButton_Click(object sender, EventArgs e)
-        {
-            Utente user = listboxUtenti.SelectedItem as Utente;
             descrizioneUtenteTxt.Text = user.describeUtente();
+            descrizioneLibriPrestitoTxt.Text = user.describeLibriPrestito();
+            descrizioneLibroTxt.Text = book.describeLibro();
         }
 
         private void describeLibriPrestitoButton_Click(object sender, EventArgs e)
@@ -70,13 +59,15 @@ namespace Biblioteka
 
         private void listboxUtenti_SelectedIndexChanged(object sender, EventArgs e)
         {
-            descrizioneUtenteTxt.Text = "qui descrivo l'utente selezionato";
-            descrizioneLibriPrestitoTxt.Text = "qui mostro tutti i libri che l'utente selezionato ha in prestito";
+            Utente user = listboxUtenti.SelectedItem as Utente;
+            descrizioneUtenteTxt.Text = user.describeUtente();
+            descrizioneLibriPrestitoTxt.Text = user.describeLibriPrestito();
         }
 
         private void listboxLibri_SelectedIndexChanged(object sender, EventArgs e)
         {
-            descrizioneLibroTxt.Text = "qui descrivo il libro selezionato";
+            Libro book = listboxLibri.SelectedItem as Libro;
+            descrizioneLibroTxt.Text = book.describeLibro();
         }
     }
 }

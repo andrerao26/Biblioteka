@@ -28,27 +28,12 @@ namespace Biblioteka
 
         public string describeUtente()
         {
-            string data = dataNascita.Day.ToString() + "/" + dataNascita.Month.ToString() + "/" + dataNascita.Year.ToString();
-            string output = "Nome: "            + nome           + "\r\n" +
-                            "Cognome: "         + cognome        + "\r\n" +
-                            "Codice fiscale: "  + codiceFiscale  + "\r\n" +
-                            "Data di Nascita: " + data           + "\r\n" ;
-            int count = libriPrestito.Count;
-            switch (count)
-            {
-                case 0:
-                    output += "l'utente non ha attualmente libri in prestito";
-                    break;
+            string output = "Nome: "            + nome                            + Environment.NewLine +
+                            "Cognome: "         + cognome                         + Environment.NewLine +
+                            "Codice fiscale: "  + codiceFiscale                   + Environment.NewLine +
+                            "Data di Nascita: " + dataNascita.ToShortDateString() + Environment.NewLine;
 
-                case 1:
-                    output += "L'utente ha 1 libro in prestito.";
-                    break;
 
-                default:
-                    output += "L'utente ha " + count + " libri in prestito.";
-                    break;
-            }
-                            
             return output;
         }
 
@@ -61,6 +46,21 @@ namespace Biblioteka
         {
             string output = "";
             int l = libriPrestito.Count;
+            switch (l)
+            {
+                case 0:
+                    output += "l'utente non ha attualmente libri in prestito";
+                    break;
+
+                case 1:
+                    output += "L'utente ha 1 libro in prestito:" + Environment.NewLine + Environment.NewLine;
+                    break;
+
+                default:
+                    output += "L'utente ha " + l + " libri in prestito:" + Environment.NewLine + Environment.NewLine;
+                    break;
+            }
+
             for (int i = 0; i < l; i++)
             {
                 output += libriPrestito[i].ToString();
